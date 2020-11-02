@@ -1,5 +1,5 @@
-FROM centos
-RUN yum install httpd -y
-COPY index.html /var/www/html/
+FROM ramjangra/apache2
 
-CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
+ADD . /var/www/html/
+
+
